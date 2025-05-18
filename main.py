@@ -319,7 +319,9 @@ class ReviewResponse(BaseModel):
     review: str
     is_fake: bool
 
-
+@app.get("/")
+def root():
+    return{"message":"welcome to the tustify"}
 
 @app.post("/detect_fake_comment", response_model=CommentResponse)
 async def detect_fake_comment(request: CommentRequest):
