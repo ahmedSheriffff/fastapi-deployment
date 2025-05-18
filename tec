@@ -1,0 +1,5 @@
+C:\Users\LENOVO>curl -X POST "http://127.0.0.1:8000/detect_fake_comment" -H "Content-Type: application/json" -d "{\"comment\": \"This is a test comment\"}"
+C:\Users\LENOVO>curl -X POST "http://127.0.0.1:8000/detect_fake_comment" -H "Content-Type: application/json" -d "{\"comment\": \"1\"}"
+curl -X POST "http://127.0.0.1:8000/detect_fake_comment" -H "Content-Type: application/json" -H "X-API-Key: actual_api_key_1" -d "{\"comment\": \"ahmed\"}"
+curl -X POST "http://127.0.0.1:8000/detect_spam_email" -H "Content-Type: application/json" -H "X-API-Key: actual_api_key_1" -d "{\"content\": \"up\"}"
+curl -X POST "http://127.0.0.1:8000/detect_fake_comment" -H "Content-Type: application/json" -H "X-API-Key: 007075e062ca6c91ac179bcb40ba4e9428b7fd569fec3816ccc164e6d3789da7" -d "{\"comment\": \"This is a test comment.\"}"
