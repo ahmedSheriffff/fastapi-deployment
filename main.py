@@ -6,5 +6,5 @@ async def home_root():
     return {"message" :"success"}
 
 @app.get("/deploy")
-async def home_root():
-    return {"message" :"Vercel Deployments"}
+async def deploy_root():
+    return {"message": "Vercel Deployments"}
