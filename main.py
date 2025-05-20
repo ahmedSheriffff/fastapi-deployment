@@ -5,7 +5,7 @@ app = FastAPI()
 # Root route
 @app.get("/")
 def root():
-    return {"message": "Welcome to the root route!"}
+    return {"message": "Welcome to the tustfy API"}
 
 # Route to display info for items
 @app.get("/items/")
