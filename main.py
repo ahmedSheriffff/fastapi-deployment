@@ -1,10 +1,10 @@
+import uvicorn
 from fastapi import FastAPI
 
-app= FastAPI()
-@app.get("/")
-async def home_root():
-    return {"message" :"success"}
+app = FastAPI()
 
-@app.get("/deploy")
-async def deploy_root():
-    return {"message": "Vercel Deployments"}
+@app.get("/")
+async def home():
+    return {"message": "Success"}
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=3000)
