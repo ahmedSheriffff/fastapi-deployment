@@ -18,6 +18,8 @@ from jwt.exceptions import InvalidTokenError
 from passlib.context import CryptContext
 from pydantic import BaseModel
 import pandas as pd
+from passlib.context import CryptContext
+
 
 # to get a string like this run:
 # openssl rand -hex 32
