@@ -19,6 +19,8 @@ from passlib.context import CryptContext
 from pydantic import BaseModel
 import pandas as pd
 from passlib.context import CryptContext
+import os
+import uvicorn
 
 
 # to get a string like this run:
@@ -437,3 +439,10 @@ async def add_fake_review(request: CommentLabelRequest):
     except Exception as e:
         logger.error(f"Error adding fake review: {str(e)}")
         raise HTTPException(status_code=500, detail="An unexpected error occurred.")
+    
+    
+if __name__ == "__main__":
+ 
+
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
